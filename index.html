@@ -633,7 +633,7 @@ function closeModal() {
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Dashboards</button>
+              <button data-filter-btn>Web design</button>
             </li>
 
             <li class="filter-item">
@@ -893,143 +893,193 @@ function closeModal() {
           <ul class="blog-posts-list">
 
             <li class="blog-post-item">
-              <a href="#">
+                <a href="#">
 
-            <figure class="blog-banner-box">
-                <div class="project-item-icon-box" onclick="(function(){
-                    const oldModal = document.getElementById('global-image-modal');
-                    if (oldModal) oldModal.remove();
-                    const modal = document.createElement('div');
-                    modal.id = 'global-image-modal';
-                    modal.style.position = 'fixed';
-                    modal.style.top = 0;
-                    modal.style.left = 0;
-                    modal.style.width = '100vw';
-                    modal.style.height = '100vh';
-                    modal.style.background = 'rgba(0,0,0,0.9)';
-                    modal.style.display = 'flex';
-                    modal.style.justifyContent = 'center';
-                    modal.style.alignItems = 'center';
-                    modal.style.zIndex = '99999';
-                    modal.innerHTML = `
-                        <span onclick='this.parentElement.remove()' style='
-                            position:absolute;
-                            top:20px;
-                            right:30px;
-                            font-size:40px;
-                            color:white;
-                            font-weight:bold;
-                            cursor:pointer;'>×</span>
-                        <img src='./assets/images/re1.png' style='
-                            max-width:90vw;
-                            max-height:90vh;
-                            object-fit:contain;
-                            border-radius:10px;'>
-                    `;
-                    document.body.appendChild(modal);
-                })()">
-                    <ion-icon name="eye-outline"></ion-icon>
-                </div>
+                    <style>
+                        .blog-banner-box {
+                            position: relative;
+                        }
+                        .eye-icon-overlay {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            font-size: 36px;
+                            color: gold;
+                            background: rgba(0, 0, 0, 0.5);
+                            padding: 12px;
+                            border-radius: 50%;
+                            cursor: pointer;
+                            opacity: 0;
+                            transition: opacity 0.3s ease;
+                            z-index: 2;
+                        }
+                        .blog-banner-box:hover .eye-icon-overlay {
+                            opacity: 1;
+                        }
+                    </style>
 
-                <img src="./assets/images/re1.png" alt="Design conferences in 2022" loading="lazy">
-            </figure>
+                    <figure class="blog-banner-box">
 
+                        <!-- Eye icon (hidden until hover) -->
+                        <div class="eye-icon-overlay" onclick="
+                            (() => {
+                                const oldModal = document.getElementById('image-modal');
+                                if (oldModal) oldModal.remove();
+                                const modal = document.createElement('div');
+                                modal.id = 'image-modal';
+                                modal.style.position = 'fixed';
+                                modal.style.top = 0;
+                                modal.style.left = 0;
+                                modal.style.width = '100vw';
+                                modal.style.height = '100vh';
+                                modal.style.background = 'rgba(0,0,0,0.9)';
+                                modal.style.display = 'flex';
+                                modal.style.justifyContent = 'center';
+                                modal.style.alignItems = 'center';
+                                modal.style.zIndex = 99999;
+                                modal.innerHTML = `
+                                    <span onclick='this.parentElement.remove()' style='
+                                        position:absolute;
+                                        top:20px;
+                                        right:30px;
+                                        font-size:40px;
+                                        color:white;
+                                        font-weight:bold;
+                                        cursor:pointer;'>×</span>
+                                    <img src='./assets/images/re1.png' style='
+                                        max-width:90vw;
+                                        max-height:90vh;
+                                        object-fit:contain;
+                                        border-radius:10px;'>
+                                `;
+                                document.body.appendChild(modal);
+                            })()
+                        ">
+                            <ion-icon name="eye-outline"></ion-icon>
+                        </div>
 
-                <div class="blog-content">
+                        <!-- Blog image -->
+                        <img src="./assets/images/re1.png" alt="Design conferences in 2022" loading="lazy">
+                    </figure>
 
-                  <div class="blog-meta">
-                    <p class="blog-category">Published on</p>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <p class="blog-category">Published on</p>
+                            <span class="dot"></span>
+                            <time datetime="2022-02-23">July 09, 2024</time>
+                        </div>
 
-                    <span class="dot"></span>
+                        <h3 class="h3 blog-item-title">
+                            METAFRAUD: AN ANALYSIS OF MULTIDIMENSIONAL APPROACH TO FRAUD DETECTION
+                        </h3>
 
-                    <time datetime="2022-02-23">July 09, 2024</time>
-                  </div>
+                        <p class="blog-text">
+                            The Board of International Journal of Creative Research Thoughts.<br>
+                            PAPER ID: IJCRT2407850 <br>
+                            Registration ID: 26533
+                        </p>
+                    </div>
 
-                  <h3 class="h3 blog-item-title">METAFRAUD: AN ANALYSIS OF MULTIDIMENSIONAL APPROACH TO
- FRAUD DETECTION</h3>
-
-                  <p class="blog-text">
-                    The Board of
- International Journal of Creative Research Thoughts . <br>
- PAPER ID : IJCRT2407850 <br>
- Registration ID : 26533
-                  </p>
-
-                </div>
-
-              </a>
+                </a>
             </li>
+
 
             <li class="blog-post-item">
-              <a href="#">
+                <a href="#">
 
-            <figure class="blog-banner-box">
-                <div class="project-item-icon-box" onclick="(function(){
-                    const oldModal = document.getElementById('global-image-modal');
-                    if (oldModal) oldModal.remove();
-                    const modal = document.createElement('div');
-                    modal.id = 'global-image-modal';
-                    modal.style.position = 'fixed';
-                    modal.style.top = 0;
-                    modal.style.left = 0;
-                    modal.style.width = '100vw';
-                    modal.style.height = '100vh';
-                    modal.style.background = 'rgba(0,0,0,0.9)';
-                    modal.style.display = 'flex';
-                    modal.style.justifyContent = 'center';
-                    modal.style.alignItems = 'center';
-                    modal.style.zIndex = '99999';
-                    modal.innerHTML = `
-                        <span onclick='this.parentElement.remove()' style='
-                            position:absolute;
-                            top:20px;
-                            right:30px;
-                            font-size:40px;
-                            color:white;
-                            font-weight:bold;
-                            cursor:pointer;'>×</span>
-                        <img src='./assets/images/re1.png' style='
-                            max-width:90vw;
-                            max-height:90vh;
-                            object-fit:contain;
-                            border-radius:10px;'>
-                    `;
-                    document.body.appendChild(modal);
-                })()">
-                    <ion-icon name="eye-outline"></ion-icon>
-                </div>
+                    <style>
+                        .blog-banner-box {
+                            position: relative;
+                        }
 
-                <img src="./assets/images/r2.png" alt="Design conferences in 2022" loading="lazy">
-            </figure>
+                        .eye-icon-overlay {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            font-size: 36px;
+                            color: gold;
+                            background: rgba(0, 0, 0, 0.5);
+                            padding: 12px;
+                            border-radius: 50%;
+                            cursor: pointer;
+                            opacity: 0;
+                            transition: opacity 0.3s ease;
+                            z-index: 2;
+                        }
 
+                        .blog-banner-box:hover .eye-icon-overlay {
+                            opacity: 1;
+                        }
+                    </style>
 
-                <div class="blog-content">
+                    <figure class="blog-banner-box">
 
-                  <div class="blog-meta">
-                    <p class="blog-category">Publised on</p>
+                        <!-- Eye icon overlay -->
+                        <div class="eye-icon-overlay" onclick="
+                            (() => {
+                                const oldModal = document.getElementById('image-modal');
+                                if (oldModal) oldModal.remove();
+                                const modal = document.createElement('div');
+                                modal.id = 'image-modal';
+                                modal.style.position = 'fixed';
+                                modal.style.top = 0;
+                                modal.style.left = 0;
+                                modal.style.width = '100vw';
+                                modal.style.height = '100vh';
+                                modal.style.background = 'rgba(0,0,0,0.9)';
+                                modal.style.display = 'flex';
+                                modal.style.justifyContent = 'center';
+                                modal.style.alignItems = 'center';
+                                modal.style.zIndex = 99999;
+                                modal.innerHTML = `
+                                    <span onclick='this.parentElement.remove()' style='
+                                        position:absolute;
+                                        top:20px;
+                                        right:30px;
+                                        font-size:40px;
+                                        color:white;
+                                        font-weight:bold;
+                                        cursor:pointer;'>×</span>
+                                    <img src='./assets/images/r2.png' style='
+                                        max-width:90vw;
+                                        max-height:90vh;
+                                        object-fit:contain;
+                                        border-radius:10px;'>
+                                `;
+                                document.body.appendChild(modal);
+                            })()
+                        ">
+                            <ion-icon name="eye-outline"></ion-icon>
+                        </div>
 
-                    <span class="dot"></span>
+                        <!-- Image -->
+                        <img src="./assets/images/r2.png" alt="Best fonts every designer" loading="lazy">
+                    </figure>
 
-                    <time datetime="2022-02-23">November 18, 2024</time>
-                  </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <p class="blog-category">Published on</p>
+                            <span class="dot"></span>
+                            <time datetime="2022-02-23">November 18, 2024</time>
+                        </div>
 
-                  <h3 class="h3 blog-item-title">ENSEMBLE
-BASED MACHINE LEARNING FOR ENHANCED DIAGNOSTIC 
-ACCURACY IN DERMATOLOGY: BRIDGING THE GAP IN HEALTHCARE 
-ACCESS.</h3>
+                        <h3 class="h3 blog-item-title">
+                            ENSEMBLE BASED MACHINE LEARNING FOR ENHANCED DIAGNOSTIC ACCURACY IN DERMATOLOGY:
+                            BRIDGING THE GAP IN HEALTHCARE ACCESS.
+                        </h3>
 
-                  <p class="blog-text">
-                    International Research Journal Of Modernization 
-in Engineering Technology and Science .<br>
-Ref: IRJMETS/Certificate/Volume 06/Issue 11/61100091686 <br>
-DOI : https://www.doi.org/10.56726/IRJMETS64115 
+                        <p class="blog-text">
+                            International Research Journal Of Modernization in Engineering Technology and Science.<br>
+                            Ref: IRJMETS/Certificate/Volume 06/Issue 11/61100091686 <br>
+                            DOI : <a href="https://www.doi.org/10.56726/IRJMETS64115" target="_blank" style="color: #007bff;">https://www.doi.org/10.56726/IRJMETS64115</a>
+                        </p>
+                    </div>
 
-                  </p>
-
-                </div>
-
-              </a>
+                </a>
             </li>
+
 
           </ul>
 
@@ -1059,28 +1109,57 @@ DOI : https://www.doi.org/10.56726/IRJMETS64115
           </figure>
         </section>
 
-        <section class="contact-form">
+            <section class="contact-form">
 
-          <h3 class="h3 form-title">Contact Form</h3>
+                <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
+                <form id="contact-form" class="form">
+                    <div class="input-wrapper">
+                        <input type="text" name="fullname" class="form-input" placeholder="Full name" required>
+                        <input type="email" name="email" class="form-input" placeholder="Email address" required>
+                    </div>
 
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+                    <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
+                    <button class="form-btn" type="submit">
+                        <ion-icon name="paper-plane"></ion-icon>
+                        <span>Send Message</span>
+                    </button>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+                    <!-- Success Message Box -->
+                    <div id="success-box" style="
+                        display: none;
+                        margin-top: 20px;
+                        padding: 15px;
+                        background-color: #d4edda;
+                        color: #155724;
+                        border: 1px solid #c3e6cb;
+                        border-radius: 5px;
+                        font-size: 14px;">
+                        ✅ Message sent successfully!
+                    </div>
+                </form>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
+                <!-- EmailJS Integration -->
+                <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+                <script>
+                    emailjs.init("QeC5orXIVDewFBZqK");  // Replace with your actual public key
 
-          </form>
+                    document.getElementById("contact-form").addEventListener("submit", function (event) {
+                        event.preventDefault();
 
-        </section>
+                        emailjs.sendForm('service_xpxe3h9', 'template_91rur5k', this)
+                            .then(function () {
+                                document.getElementById("success-box").style.display = "block";
+                                document.getElementById("contact-form").reset();
+                            }, function (error) {
+                                alert("❌ Failed to send message:\n" + JSON.stringify(error));
+                            });
+                    });
+                </script>
+
+            </section>
+
 
       </article>
 
