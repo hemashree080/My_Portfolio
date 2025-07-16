@@ -985,38 +985,85 @@ function closeModal() {
             </li>
 
 
-            <li class="blog-post-item">
+                        <li class="blog-post-item">
                 <a href="#">
 
-                    <style>
-                        .blog-banner-box {
-                            position: relative;
-                        }
+            <style>
+                .blog-post-item {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                }
 
-                        .eye-icon-overlay {
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            font-size: 36px;
-                            color: gold;
-                            background: rgba(0, 0, 0, 0.5);
-                            padding: 12px;
-                            border-radius: 50%;
-                            cursor: pointer;
-                            opacity: 0;
-                            transition: opacity 0.3s ease;
-                            z-index: 2;
-                        }
+                .blog-banner-box {
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 12px;
+                    height: auto;
+                    max-height: 280px;
+                }
 
-                        .blog-banner-box:hover .eye-icon-overlay {
-                            opacity: 1;
-                        }
-                    </style>
+                .blog-banner-box img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                    display: block;
+                }
+
+                .eye-icon-overlay {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 36px;
+                    color: gold;
+                    background: rgba(0, 0, 0, 0.5);
+                    padding: 12px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                    z-index: 2;
+                }
+
+                .blog-banner-box:hover .eye-icon-overlay {
+                    opacity: 1;
+                }
+
+                .blog-content {
+                    padding-top: 12px;
+                    max-height: 320px; /* Increased to avoid clipping */
+                    overflow: hidden;
+                }
+
+                .blog-item-title {
+                    font-size: 1rem;
+                    line-height: 1.4;
+                    font-weight: bold;
+                    word-wrap: break-word;
+                    overflow-wrap: break-word;
+                    color: white;
+                    transition: color 0.3s ease;
+                }
+
+                /* Title hover highlight */
+                .blog-post-item:hover .blog-item-title {
+                    color: rgb(223, 167, 46);
+                }
+
+                .blog-text {
+                    font-size: 0.875rem;
+                    overflow-wrap: break-word;
+                    word-wrap: break-word;
+                    white-space: normal;
+                    line-height: 1.5;
+                }
+            </style>
+
 
                     <figure class="blog-banner-box">
 
-                        <!-- Eye icon overlay -->
+                        <!-- Eye icon (on hover) -->
                         <div class="eye-icon-overlay" onclick="
                             (() => {
                                 const oldModal = document.getElementById('image-modal');
@@ -1054,31 +1101,32 @@ function closeModal() {
                             <ion-icon name="eye-outline"></ion-icon>
                         </div>
 
-                        <!-- Image -->
-                        <img src="./assets/images/r2.png" alt="Best fonts every designer" loading="lazy">
+                        <!-- Certificate Image -->
+                        <img src="./assets/images/r2.png" alt="Certificate" loading="lazy">
                     </figure>
 
                     <div class="blog-content">
                         <div class="blog-meta">
                             <p class="blog-category">Published on</p>
                             <span class="dot"></span>
-                            <time datetime="2022-02-23">November 18, 2024</time>
+                            <time datetime="2024-11-18">November 18, 2024</time>
                         </div>
 
                         <h3 class="h3 blog-item-title">
-                            ENSEMBLE BASED MACHINE LEARNING FOR ENHANCED DIAGNOSTIC ACCURACY IN DERMATOLOGY:
-                            BRIDGING THE GAP IN HEALTHCARE ACCESS.
+                            ENSEMBLE BASED MACHINE LEARNING FOR ENHANCED DIAGNOSTIC ACCURACY IN DERMATOLOGY
                         </h3>
 
                         <p class="blog-text">
                             International Research Journal Of Modernization in Engineering Technology and Science.<br>
                             Ref: IRJMETS/Certificate/Volume 06/Issue 11/61100091686 <br>
-                            DOI : <a href="https://www.doi.org/10.56726/IRJMETS64115" target="_blank" style="color: #007bff;">https://www.doi.org/10.56726/IRJMETS64115</a>
                         </p>
                     </div>
 
                 </a>
             </li>
+
+
+
 
 
           </ul>
